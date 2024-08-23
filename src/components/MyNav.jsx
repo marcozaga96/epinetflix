@@ -5,7 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 const MyNav = function () {
   return (
     <Nav
-      className="navbar navbar-expand-lg bg-dark"
+      className="navbar navbar-expand-lg "
       data-bs-theme="dark"
       style={{ backgroundColor: "#221f1f" }}
     >
