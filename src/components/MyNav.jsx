@@ -1,6 +1,7 @@
-import { Nav } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import logo from "./logo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
 
 const MyNav = function () {
   return (
@@ -26,31 +27,21 @@ const MyNav = function () {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link active fw-bold" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fw-bold" href="#">
-                TV Shows
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fw-bold" href="#">
-                Movies
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fw-bold" href="#">
-                Recently Added
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link fw-bold" href="#">
-                My List
-              </a>
-            </li>
+            <Link to="/" className="nav-link text-light">
+              Home
+            </Link>
+            <Link to="/tvShow" className="nav-link text-light">
+              TV Shows
+            </Link>
+            <Link to="/" className="nav-link text-light">
+              Movies
+            </Link>
+            <Link to="/" className="nav-link text-light">
+              Recently Added
+            </Link>
+            <Link to="/" className="nav-link text-light">
+              My List
+            </Link>
           </ul>
           <div
             className="d-flex align-items-center;"

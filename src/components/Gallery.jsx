@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Alert, Col, Container, Row, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Gallery extends Component {
   componentDidMount = () => {
@@ -49,13 +50,15 @@ class Gallery extends Component {
         </Container>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 ">
           {this.state.films.map((film, i) => (
-            <div key={i} className="col mb-2 text-center px-1">
-              <img
-                className="img-fluid w-75"
-                src={film.Poster}
-                alt={film.Title}
-              />
-            </div>
+            <Link to={`/movie-details/${film.imdbID}`} key={i}>
+              <div className="col mb-2 text-center px-1">
+                <img
+                  className="img-fluid w-75"
+                  src={film.Poster}
+                  alt={film.Title}
+                />
+              </div>
+            </Link>
           ))}
         </div>
       </div>
